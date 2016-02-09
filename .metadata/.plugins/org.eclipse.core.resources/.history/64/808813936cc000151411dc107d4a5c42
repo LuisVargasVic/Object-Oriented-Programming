@@ -1,0 +1,19 @@
+public class Libro {
+	public String titulo;
+	public String autor;
+	public String editorial;
+	
+	//Constructor por default
+	public Libro(){
+		titulo="Harry Potter";
+		autor="J.K.Rowling";
+		editorial="Salamandra";
+	}
+	
+	//Constructor con parametros
+	public Libro(String a ,String b, String c){
+		this.titulo=a;
+		this.autor=b;
+		this.editorial=c;
+	}
+}

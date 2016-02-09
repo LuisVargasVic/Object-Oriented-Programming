@@ -1,0 +1,59 @@
+import javax.swing.*;
+public class NumerosRomanos {
+	private static JFrame frame;
+	public static void main(String[] args){
+	    romano();
+	    pitagoras();
+	  }
+	  public static void romano(){
+	    String[][] number = {
+	      {"","I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},
+	      {"","X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},
+	      {"","C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"},
+	      {"","M","MM","MMM"}
+	    };
+	    JFrame frame = new JFrame("InputDialog");
+	    int num =Integer.parseInt(JOptionPane.showInputDialog(frame,"Número para romano")),
+	        m=num/1000,
+	        c=(num/100)%10,
+	        d=(num/10)%10,
+	        u=num%10;
+	    if(num<4000 && num>999){
+	        System.out.println(number[3][m]+number[2][c]+number[1][d]+number[0][u]);
+	    }
+	    else{
+	      if(num<1000 && num>99){
+	          System.out.println(number[2][c]+number[1][d]+number[0][u]);
+	      }
+	      else{
+	        if(num<100 && num>9){
+	            System.out.println(number[1][d]+number[0][u]);
+	        }
+	        else{
+	          System.out.println(number[0][num]);
+	        }
+	      }
+	    }
+	  }
+	  public static void pitagoras(){
+	    setFrame(new JFrame("InputDialog"));
+	    for(int a = 1; a < 500; a++){
+	      for(int b = 1; b < 500; b++){
+	        for(int c = 1; c < 500; c++){
+	          if(b<a){
+	            if((a*a + b*b)==(c*c)){
+	              System.out.println(a+" "+b+" "+c);
+	            }
+	          }
+	        }
+	      }
+	  }
+  System.exit(0);
+  }
+	public static JFrame getFrame() {
+		return frame;
+	}
+	public static void setFrame(JFrame frame) {
+		NumerosRomanos.frame = frame;
+	}
+}
