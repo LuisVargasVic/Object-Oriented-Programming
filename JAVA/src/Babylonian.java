@@ -4,7 +4,7 @@ public class Babylonian {
 	public Babylonian(double num){
 		this.num = num;
 	}
-	public double sqrt(double num){
+	public double sqrt(){
 		double x = num / 2;
 		double y = x + 1;
 		while (x!=y){
@@ -25,7 +25,7 @@ public class Babylonian {
 			}
 			else{
 				Babylonian number = new Babylonian(ans);
-				System.out.println(number.sqrt(ans));
+				System.out.println(number.sqrt());
 			}
 		}
 	}

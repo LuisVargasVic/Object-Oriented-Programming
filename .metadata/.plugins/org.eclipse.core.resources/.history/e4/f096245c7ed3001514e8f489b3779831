@@ -1,0 +1,31 @@
+package geometry;
+/*The Figure class is the superclass so it's the parent
+  actually it's also an abstract class */
+public abstract class Figure {
+	private String figureName;
+	private double area;
+	
+	public Figure(){
+		figureName = "generic figure";
+		setArea(0);
+	}
+	public Figure(String figureName){
+		this.figureName = figureName;
+		setArea(0);
+	}
+	public Figure(String figureName, double area){
+		this.figureName = figureName;
+		this.setArea(area);
+	}
+	public String getFigureName(){
+		return figureName;
+	}
+	public abstract double calculateArea();
+	public abstract double calculatePerimeter();
+	public double getArea() {
+		return area;
+	}
+	public void setArea(double area) {
+		this.area = area;
+	}
+}

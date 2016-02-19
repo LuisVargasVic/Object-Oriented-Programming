@@ -1,0 +1,75 @@
+import javax.swing.*;
+public class YoSoy196 {
+	private static final boolean True = false;
+	private static final boolean False = false;
+	public String x1;
+	public int x2;
+	public String x3;
+	public String x;
+	public int nonlycherels = 0;
+	public int lycherels = 0;
+	public int npalindromes = 0;
+	public int lb;
+	public int ub;
+	public YoSoy196(String num){
+		this.x = num;
+	}
+	public boolean palindrom(String x){
+		this.x1 = x;
+		this.x2 = x1[::-1];
+		this.x3 = x2;
+		if (x == x3){
+			return True;
+		}
+		else{
+			return False;
+		}
+	}
+	
+	public int[] range(int start, int stop){
+		this.lb = start;
+		this.ub = stop;
+		int[] result = new int[stop-start];
+
+		for(int c=0;c<stop-start;c++)
+			result[c] = start+c;
+			Object c;
+			boolean c1 = c.palindrom();
+			if (c1 == False){
+				int c2 = 0;
+				boolean p1 = False;
+				String candidate = c;
+				while (c2<30 && p1 == False){
+					c2 = c2 + 1;
+					String c3 = candidate;
+					int r =c3[::-1];
+					String r1 = r;
+					candidate = candidate + r1;
+					p1 = palindrom(candidate);
+					
+						if (p1 == True){
+							nonlycherels = nonlycherels + 1;
+						}
+							
+						if(c2==30 && p1==False){
+							lycherels = lycherels + 1;
+						}
+							
+						else{
+							npalindromes = npalindromes + 1;
+						}
+						
+				System.out.print(npalindromes);
+				print("The number of non-Lycherels is: ", nonlycherels)
+				print("The number of Lycherel  is: ", Lycherels)
+				}
+			}
+			
+
+		return result;
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}

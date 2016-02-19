@@ -1,0 +1,17 @@
+package geometry;
+import javax.swing.*;
+
+public class Rectangle extends Figure{
+	public Rectangle(){
+		super("Rectangle");
+	}
+	public Rectangle(String name){
+		super(name);
+	}
+	public double calculateArea(){
+		double height = Double.parseDouble(JOptionPane.showInputDialog("Give height of the rectangle: "));
+		double base = Double.parseDouble(JOptionPane.showInputDialog("Give base of the rectangle: "));
+		return base * height;
+	}
+	
+}

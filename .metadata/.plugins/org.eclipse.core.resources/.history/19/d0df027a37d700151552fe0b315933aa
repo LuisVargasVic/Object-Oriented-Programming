@@ -1,0 +1,27 @@
+import javax.swing.*;
+public class YoSoy196 {
+	String x1;
+	String x2;
+	String x3;
+	String x;
+	int nonlycherels = 0;
+	int lycherels = 0;
+	int npalindromes = 0;
+	public YoSoy196(String num){
+		this.x = num;
+	}
+	public boolean palindrom(String x){
+		this.x1 = x;
+		this.x2 = x1[::-1];
+		this.x3 = x2;
+		if (x == x3){
+			return True;
+		}
+		else{
+			return False;
+		}
+	}
+	public static void main(String[] args){
+		
+	}
+}

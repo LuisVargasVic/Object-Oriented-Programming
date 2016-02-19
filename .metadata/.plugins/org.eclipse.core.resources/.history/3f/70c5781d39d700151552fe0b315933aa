@@ -1,0 +1,43 @@
+import javax.swing.*;
+public class YoSoy196 {
+	private static final boolean True = false;
+	private static final boolean False = false;
+	public String x1;
+	public String x2;
+	public String x3;
+	public String x;
+	public int nonlycherels = 0;
+	public int lycherels = 0;
+	public int npalindromes = 0;
+	public int lb;
+	public int ub;
+	public YoSoy196(String num){
+		this.x = num;
+	}
+	public boolean palindrom(String x){
+		this.x1 = x;
+		this.x2 = x1[::-1];
+		this.x3 = x2;
+		if (x == x3){
+			return True;
+		}
+		else{
+			return False;
+		}
+	}
+	
+	public int[] range(int start, int stop){
+		this.lb = start;
+		this.ub = stop;
+		int[] result = new int[stop-start];
+
+		for(int i=0;i<stop-start;i++)
+			result[i] = start+i;
+
+		return result;
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}
