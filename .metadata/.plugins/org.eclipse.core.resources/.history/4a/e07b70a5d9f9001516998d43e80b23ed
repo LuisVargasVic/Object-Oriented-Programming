@@ -1,0 +1,30 @@
+package library;
+
+public class GravityCalculator {
+	private static double gravity;
+	public double initialVelocity;
+	public double fallingTime;
+	public double initialPosition;
+	public double finalPosition;
+	
+	public GravityCalculator(){
+		gravity = 0;
+		initialVelocity = 0;
+		fallingTime = 0;
+		initialPosition = 0;
+		finalPosition = 0;
+	}
+	public double calculation(){
+		return 0.5 * (gravity)*((fallingTime)*(fallingTime)) + (initialVelocity)*(fallingTime) + (initialVelocity);
+	}
+	
+	public static void main(String[] arguments) {
+		double fallingTime = 10.0;
+		double finalPosition = 0.0;
+		 System.out.println("The object's position after " + fallingTime +
+		" seconds is " + finalPosition + " m.");
+		 GravityCalculator ans = new GravityCalculator();
+		 ans.calculation();
+		 System.out.println(ans);
+		}
+}

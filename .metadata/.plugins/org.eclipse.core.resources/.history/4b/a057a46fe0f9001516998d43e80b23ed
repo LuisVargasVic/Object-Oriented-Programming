@@ -1,0 +1,30 @@
+package library;
+
+public class FooCorporation {
+	private double basePay;
+	private double hoursWorked;
+	
+	public FooCorporation(double a, double b){
+		this.basePay = a;
+		this.hoursWorked = b;
+	}
+	public double payment(){
+		if (this.hoursWorked > 40){
+			return (this.hoursWorked - 40) * this.basePay * 1.5;
+		}
+		else {
+			return this.basePay * 1.5;
+		}
+	}
+	public void notPaid(){
+		
+	}
+	public static void main(String[] arguments){
+		FooCorporation employee1 = new FooCorporation(7.5,35.0);
+		FooCorporation employee2 = new FooCorporation(8.2,47.0);
+		FooCorporation employee3 = new FooCorporation(10.0,73.0);
+		System.out.println(employee1.payment());
+		System.out.println(employee2.payment());
+		System.out.println(employee3.payment());
+	}
+}

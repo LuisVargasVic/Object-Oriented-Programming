@@ -1,0 +1,8 @@
+package library;
+
+public class FooCorporation {
+	private double basePay;
+	private double hoursWorked;
+	
+	
+}

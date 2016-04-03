@@ -1,0 +1,26 @@
+package library;
+
+public class GravityCalculator {
+	double gravity;
+	double initialVelocity;
+	double fallingTime;
+	double initialPosition;
+	double finalPosition;
+	
+	public GravityCalculator(){
+		gravity = -9.81;
+		initialVelocity = 0.0;
+		fallingTime = 10.0;
+		initialPosition = 0.0;
+		finalPosition = 0.0;
+	}
+	public double calculation(){
+		return 0.5 * (gravity)*((fallingTime)*(fallingTime)) + (initialVelocity)*(fallingTime) + (initialVelocity);
+	}
+	
+	public static void main(String[] arguments) {
+		 GravityCalculator ans = new GravityCalculator();
+		 ans.calculation();
+		 System.out.println(ans);
+		}
+}
